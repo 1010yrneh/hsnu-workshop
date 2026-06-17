@@ -54,7 +54,7 @@ const specialGroup = linksData.friends.find((g) => g.id_name === 'special-links'
 const friendList = (friendGroup?.link_list || []) as FriendLink[];
 const specialList = (specialGroup?.link_list || []) as SpecialLink[];
 
-const API_URL = 'https://yourdomains.com/all.json';// friend-circle-lite 服务的json数据
+const API_URL = 'https://yourdomains.com/all.json';// friend-circle-lite 服務的 JSON 資料
 let data: FriendData | null = null;
 let fetchError = false;
 
@@ -75,14 +75,14 @@ const stats = data?.statistical_data;
 const articles = data?.article_data || [];
 ---
 
-<BaseLayout title="友链">
+<BaseLayout title="友站">
   <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-8">
     <h1 class="text-2xl font-bold mb-2 flex items-center gap-2">
       <span class="w-1 h-6 bg-primary rounded-full inline-block"></span>
-      友链
+      友站
     </h1>
     <p class="text-sm text-gray-400 dark:text-gray-500 mb-8">
-      友情链接 &amp; 友链圈最新文章动态
+      友情連結 &amp; 友站圈最新文章動態
     </p>
 
     {
@@ -90,7 +90,7 @@ const articles = data?.article_data || [];
         <div class="mb-8">
           <h2 class="text-lg font-semibold mb-4 flex items-center gap-2">
             <span class="w-1 h-5 bg-primary rounded-full inline-block"></span>
-            我的朋友们
+            我的朋友們
           </h2>
           <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
             {friendList.map((friend) => (
@@ -127,7 +127,7 @@ const articles = data?.article_data || [];
         <div class="mb-8">
           <h2 class="text-lg font-semibold mb-4 flex items-center gap-2">
             <span class="w-1 h-5 bg-green-500 rounded-full inline-block"></span>
-            特别推荐
+            特別推薦
           </h2>
           <div class="grid grid-cols-2 gap-3">
             {specialList.map((item) => (
@@ -164,8 +164,8 @@ const articles = data?.article_data || [];
     {
       fetchError && (
         <div class="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl p-6 text-center text-amber-700 dark:text-amber-400 mb-8">
-          <p class="font-semibold">无法连接到友链后端</p>
-          <p class="text-sm mt-1">后端地址：{API_URL}</p>
+          <p class="font-semibold">無法連線到友站後端</p>
+          <p class="text-sm mt-1">後端位址：{API_URL}</p>
         </div>
       )
     }
@@ -175,24 +175,24 @@ const articles = data?.article_data || [];
         <>
           <h2 class="text-lg font-semibold mb-4 flex items-center gap-2">
             <span class="w-1 h-5 bg-blue-500 rounded-full inline-block"></span>
-            友链圈动态
+            友站圈動態
           </h2>
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
           <div class="bg-white dark:bg-[var(--color-card-dark)] rounded-xl shadow-sm p-4 text-center">
             <div class="text-2xl font-bold text-primary">{stats.friends_num}</div>
-            <div class="text-xs text-gray-400 dark:text-gray-500 mt-1">友链总数</div>
+            <div class="text-xs text-gray-400 dark:text-gray-500 mt-1">友站總數</div>
           </div>
           <div class="bg-white dark:bg-[var(--color-card-dark)] rounded-xl shadow-sm p-4 text-center">
             <div class="text-2xl font-bold text-green-500">{stats.active_num}</div>
-            <div class="text-xs text-gray-400 dark:text-gray-500 mt-1">活跃友链</div>
+            <div class="text-xs text-gray-400 dark:text-gray-500 mt-1">活躍友站</div>
           </div>
           <div class="bg-white dark:bg-[var(--color-card-dark)] rounded-xl shadow-sm p-4 text-center">
             <div class="text-2xl font-bold text-blue-500">{stats.article_num}</div>
-            <div class="text-xs text-gray-400 dark:text-gray-500 mt-1">文章总数</div>
+            <div class="text-xs text-gray-400 dark:text-gray-500 mt-1">文章總數</div>
           </div>
           <div class="bg-white dark:bg-[var(--color-card-dark)] rounded-xl shadow-sm p-4 text-center">
             <div class="text-sm font-semibold text-gray-500 dark:text-gray-400 mt-1">{stats.last_updated_time}</div>
-            <div class="text-xs text-gray-400 dark:text-gray-500 mt-1">最后更新</div>
+            <div class="text-xs text-gray-400 dark:text-gray-500 mt-1">最後更新</div>
           </div>
           </div>
         </>
@@ -240,7 +240,7 @@ const articles = data?.article_data || [];
     {
       !fetchError && !stats && (
         <div class="text-center py-12 text-gray-400">
-          <p>暂无友链数据</p>
+          <p>暫無友站資料</p>
         </div>
       )
     }

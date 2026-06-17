@@ -5,7 +5,7 @@
   xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
   <xsl:output method="html" version="1.0" encoding="UTF-8" indent="yes" />
   <xsl:template match="/">
-    <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+    <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-TW">
       <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -34,7 +34,7 @@
           }
           * { box-sizing: border-box; margin: 0; padding: 0; }
           body {
-            font: 15px/1.75 "Inter","Noto Sans SC",-apple-system,Segoe UI,Roboto,sans-serif;
+            font: 15px/1.75 "Inter","Noto Sans TC",-apple-system,Segoe UI,Roboto,sans-serif;
             background: var(--c-bg); color: var(--c-text);
             max-width: 720px; margin: 0 auto; padding: 40px 20px 80px;
           }
@@ -103,7 +103,7 @@
         <div class="header">
           <h1><xsl:value-of select="/rss/channel/title" /></h1>
           <p><xsl:value-of select="/rss/channel/description" /></p>
-          <div class="pill">RSS Feed</div>
+          <div class="pill">RSS 訂閱</div>
           <div class="meta">
             <xsl:value-of select="count(/rss/channel/item)" /> 篇文章 •
             <xsl:value-of select="/rss/channel/lastBuildDate" />
@@ -130,7 +130,7 @@
               </div>
             </xsl:if>
             <div class="link-row">
-              <a href="{link}">阅读全文 →</a>
+              <a href="{link}">閱讀全文 →</a>
             </div>
           </div>
         </xsl:for-each>
@@ -144,7 +144,7 @@
             </a>
           </p>
           <p style="margin-top:6px">
-            通过 <a href="https://aboutfeeds.com" target="_blank" rel="noopener">RSS 阅读器</a> 订阅本博客
+            使用 <a href="https://aboutfeeds.com" target="_blank" rel="noopener">RSS 閱讀器</a> 訂閱本部落格
           </p>
         </div>
       </body>

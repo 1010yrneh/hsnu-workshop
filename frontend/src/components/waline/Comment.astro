@@ -10,7 +10,7 @@ const { class: className } = Astro.props;
 ---
 
 <div id="waline" class:list={['not-prose', className]}>
-  Comment seems stuck. Try to refresh?
+  留言區載入異常，請嘗試重新整理。
 </div>
 
 <script>
@@ -24,8 +24,8 @@ const { class: className } = Astro.props;
     walineMounted.current = true;
     walineInit({
       el: '#waline',
-      serverURL: '',  //waline服务链接
-      lang: 'zh-CN',
+      serverURL: '',  // Waline 服務連結
+      lang: 'zh-TW',
       dark: 'auto',
       meta: ['nick', 'mail', 'link'],
       requiredMeta: ['nick'],
@@ -136,7 +136,7 @@ const { class: className } = Astro.props;
   }
   #waline :global(.wl-reaction-votes:after) {
     margin-left: 0.25em;
-    content: 'Like(s)';
+    content: '個讚';
     display: inline-block;
     clear: both;
     border: 0;

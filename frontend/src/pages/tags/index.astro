@@ -16,10 +16,10 @@ const tags = Array.from(tagMap.entries())
   .sort((a, b) => b.count - a.count);
 ---
 
-<BlogLayout title="标签">
+<BlogLayout title="標籤">
   <h1 class="text-2xl font-bold mb-8 flex items-center gap-2">
     <span class="w-1 h-6 bg-primary rounded-full inline-block"></span>
-    标签
+    標籤
   </h1>
   <div class="flex flex-wrap gap-3">
     {tags.map((tag) => (

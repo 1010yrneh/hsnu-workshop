@@ -1,111 +1,111 @@
 ---
-title: 从零搭建博客
-description: 详细介绍如何基于本主题从零搭建个人博客，包括安装、配置、部署全流程。
+title: 從零開始架設部落格
+description: 詳細介紹如何基於本主題從零開始架設個人部落格，包括安裝、設定、部署全流程。
 date: 2024-05-10
-tags: [教程, 入门]
-category: 教程
+tags: [教學, 入門]
+category: 教學
 cover: https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200
 ---
 
-## 环境准备
+## 環境準備
 
-确保已安装 [Bun](https://bun.sh)（推荐）或 Node.js 18+。
+請確認已安裝 [Bun](https://bun.sh)（推薦）或 Node.js 18+。
 
 ```bash
-# 安装 Bun
+# 安裝 Bun
 curl -fsSL https://bun.sh/install | bash
 ```
 
-## 创建项目
+## 建立專案
 
 ```bash
-# 克隆或初始化项目
+# 複製或初始化專案
 git clone <your-repo-url> my-blog
 cd my-blog
 bun install
 ```
 
-### 本地开发
+### 本機開發
 
 ```bash
 bun dev
 ```
 
-浏览器打开 `http://localhost:4321`，支持热重载。
+用瀏覽器開啟 `http://localhost:4321`，支援熱重載。
 
-### 构建生产版本
+### 建構正式版本
 
 ```bash
 bun run build
 ```
 
-### 预览生产构建
+### 預覽正式建構
 
 ```bash
 bun preview
 ```
 
-## 配置站点
+## 設定站台
 
-编辑 `src/consts.ts` 文件，修改以下配置：
+編輯 `src/consts.ts` 檔案，修改以下設定：
 
 ```typescript
-// 站点基本信息
+// 站台基本資訊
 export const SITE_TITLE = 'My Blog';
-export const SITE_DESCRIPTION = '这是我的个人博客';
+export const SITE_DESCRIPTION = '這是我的個人部落格';
 export const SITE_AUTHOR = 'Your Name';
 export const SITE_URL = 'https://example.com';
 export const SITE_AVATAR = '/avatar.png';
 export const SITE_COVER = '/cover.jpg';
 
-// 每页文章数
+// 每頁文章數
 export const PAGE_SIZE = 10;
 
-// 导航菜单
+// 導覽選單
 export const NAV_ITEMS = [
-  { label: '首页', href: '/' },
-  { label: '周刊', href: '/weekly' },
+  { label: '首頁', href: '/' },
+  { label: '週刊', href: '/weekly' },
   { label: '文章', href: '/archives' },
-  { label: '友链', href: '/friends' },
-  { label: '关于', href: '/about' },
+  { label: '友站', href: '/friends' },
+  { label: '關於', href: '/about' },
 ];
 
-// 社交链接
+// 社群連結
 export const SOCIAL_LINKS = [
   { name: 'GitHub', href: 'https://github.com/yourname', icon: 'github' },
   { name: 'RSS', href: '/rss.xml', icon: 'rss' },
 ];
 ```
 
-## 编写文章
+## 撰寫文章
 
-在 `src/content/blog/` 目录下创建 `.md` 或 `.mdx` 文件。
+在 `src/content/blog/` 目錄下建立 `.md` 或 `.mdx` 檔案。
 
 ### 文章 Frontmatter
 
 ```yaml
 ---
-title: 文章标题
+title: 文章標題
 description: 文章描述
 date: 2024-06-01
-tags: [标签1, 标签2]
-category: 分类
+tags: [標籤1, 標籤2]
+category: 分類
 cover: https://example.com/cover.jpg  # 或 ./images/cover.webp
-pinned: false   # 是否置顶
-draft: false    # 是否为草稿
+pinned: false   # 是否置頂
+draft: false    # 是否為草稿
 ---
 ```
 
 ### 文章存放方式
 
-支持两种目录结构：
+支援兩種目錄結構：
 
 ```
 src/content/blog/
-├── post-slug.md              # 单文件
+├── post-slug.md              # 單檔
 └── post-slug/
-    ├── index.md              # 目录形式
-    └── cover.webp            # 本地图片
+    ├── index.md              # 目錄形式
+    └── cover.webp            # 本機圖片
 ```
 
 ## 部署
@@ -113,36 +113,36 @@ src/content/blog/
 ### Vercel
 
 ```bash
-# 一键部署
+# 單鍵部署
 vercel
 ```
 
 ### Cloudflare Pages
 
-- 构建命令：`bun run build`
-- 输出目录：`dist`
+- 建構指令：`bun run build`
+- 輸出目錄：`dist`
 
 ### 其他平台
 
-任何支持静态文件托管的平台可直接部署 `dist/` 目录。
+任何支援靜態檔案託管的平台都可以直接部署 `dist/` 目錄。
 
-## 自定义主题
+## 自訂主題
 
-编辑 `src/styles/global.css` 中的 CSS 变量来自定义配色：
+編輯 `src/styles/global.css` 中的 CSS 變數來自訂配色：
 
 ```css
 @theme {
-  --color-primary: #e9536a;       /* 主色调 */
-  --color-bg-light: #f5f5f5;      /* 浅色背景 */
+  --color-primary: #e9536a;       /* 主色調 */
+  --color-bg-light: #f5f5f5;      /* 淺色背景 */
   --color-bg-dark: #1a1a2e;       /* 深色背景 */
-  --color-card-light: #ffffff;    /* 浅色卡片 */
+  --color-card-light: #ffffff;    /* 淺色卡片 */
   --color-card-dark: #1e2a45;     /* 深色卡片 */
 }
 ```
 
-修改站点字体：
+修改站台字體：
 
 ```css
---font-family-sans: 'Inter', 'Noto Sans SC', sans-serif;
+--font-family-sans: 'Inter', 'Noto Sans TC', sans-serif;
 --font-family-mono: 'JetBrains Mono', 'Fira Code', monospace;
 ```

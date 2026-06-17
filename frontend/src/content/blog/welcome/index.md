@@ -1,65 +1,65 @@
 ---
-title: 欢迎使用 Sify Blog
-description: Sify Blog 是一个基于 Astro 构建的现代化博客主题，支持 Markdown/MDX、数学公式、代码高亮、搜索、评论等丰富功能。
+title: 歡迎使用 Sify Blog
+description: Sify Blog 基於 Astro 建構，是現代化部落格主題，支援 Markdown/MDX、數學公式、程式碼醒目標示、搜尋、留言等豐富功能。
 date: 2024-06-01
-tags: [Astro, 教程]
-category: 笔记
+tags: [Astro, 教學]
+category: 筆記
 pinned: true
 cover: https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200
 ---
 
-## 快速开始
+## 快速開始
 
-Sify Blog 是一个功能完备的 Astro 博客主题。本文介绍各项功能的快速用法。
+Sify Blog 是功能完整的 Astro 部落格主題。本文介紹各項功能的快速用法。
 
-[Astro文档](https://astro.build)
+[Astro 文件](https://astro.build)
 
-### 安装运行
+### 安裝執行
 
 ```bash
 bun install
 bun dev
 ```
 
-打开 `http://localhost:4321` 即可预览。
+開啟 `http://localhost:4321` 即可預覽。
 
-### 配置站点信息
+### 設定站台資訊
 
-编辑 `src/consts.ts` 修改站点标题、描述、头像、社交链接等基本信息：
+編輯 `src/consts.ts` 修改站台標題、描述、頭像、社群連結等基本資訊：
 
 ```typescript
 export const SITE_TITLE = 'Sify Blog';
-export const SITE_DESCRIPTION = '一个基于 Astro 的现代化博客主题';
+export const SITE_DESCRIPTION = '一個基於 Astro 的現代化部落格主題';
 export const SITE_AUTHOR = 'santisify';
 ```
 
-## 特性一览
+## 功能一覽
 
-| 特性 | 说明 |
+| 功能 | 說明 |
 |------|------|
-| Markdown / MDX | 支持标准 Markdown 和 JSX 组件 |
-| 数学公式 | KaTeX 渲染行内和块级公式 |
-| 代码高亮 | Shiki 主题，复制按钮 |
-| 暗色模式 | 跟随系统 + 手动切换 |
-| 全站搜索 | 标题+正文匹配，高亮显示 |
-| 评论系统 | Waline 评论区 |
-| RSS | 自动生成 RSS Feed |
-| 友链 | 好友链接 + 友链圈动态 |
-| 文章封面 | 本地图片 / 远程 URL |
-| 响应式 | 移动端适配 |
+| Markdown / MDX | 支援標準 Markdown 和 JSX 元件 |
+| 數學公式 | KaTeX 渲染行內和區塊公式 |
+| 程式碼醒目標示 | Shiki 主題，複製按鈕 |
+| 深色模式 | 依照系統 + 手動切換 |
+| 全站搜尋 | 標題 + 正文匹配，醒目標示結果 |
+| 留言系統 | Waline 留言區 |
+| RSS | 自動產生 RSS Feed |
+| 友站 | 好友連結 + 友站圈動態 |
+| 文章封面 | 本機圖片 / 遠端 URL |
+| 響應式 | 支援行動裝置 |
 
-## 页面路由
+## 頁面路由
 
-| 路径 | 页面 |
+| 路徑 | 頁面 |
 |------|------|
-| `/` | 首页（文章列表 + Hero） |
-| `/post/[...slug]` | 文章详情页 |
-| `/categories/[category]` | 分类页面 |
-| `/tags/[tag]` | 标签页面 |
-| `/archives` | 文章归档 |
-| `/weekly` | 周刊 |
-| `/friends` | 友链页面 |
-| `/about` | 关于页面 |
-| `/rss.xml` | RSS 订阅 |
+| `/` | 首頁（文章列表 + Hero） |
+| `/post/[...slug]` | 文章詳情頁 |
+| `/categories/[category]` | 分類頁面 |
+| `/tags/[tag]` | 標籤頁面 |
+| `/archives` | 文章封存 |
+| `/weekly` | 週刊 |
+| `/friends` | 友站頁面 |
+| `/about` | 關於頁面 |
+| `/rss.xml` | RSS 訂閱 |
 
-> 💡 使用 `Ctrl + K` 快捷键随时唤出搜索面板。
+> 💡 使用 `Ctrl + K` 快捷鍵隨時叫出搜尋面板。

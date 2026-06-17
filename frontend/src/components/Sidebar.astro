@@ -91,7 +91,7 @@ function slugify(post: (typeof sorted)[0]) {
       </div>
       <div class="text-center">
         <div class="font-semibold text-sm">{Math.round(totalWords / 1000)}k</div>
-        <div class="text-xs text-gray-400">字数</div>
+        <div class="text-xs text-gray-400">字數</div>
       </div>
     </div>
   </div>
@@ -102,7 +102,7 @@ function slugify(post: (typeof sorted)[0]) {
         data-sidebar-section="categories"
       >
         <h2 class="text-sm font-semibold mb-3 text-gray-900 dark:text-gray-100">
-          分类
+          分類
         </h2>
         <div class="sidebar-expand-list flex flex-wrap gap-2">
           {allCategories.map(([name, info], i) => (
@@ -124,7 +124,7 @@ function slugify(post: (typeof sorted)[0]) {
               class="sidebar-toggle-btn mt-3 text-xs text-primary hover:underline"
               data-expanded="false"
             >
-              显示全部 ({allCategories.length})
+              顯示全部 ({allCategories.length})
             </button>
           )
         }
@@ -138,7 +138,7 @@ function slugify(post: (typeof sorted)[0]) {
         data-sidebar-section="tags"
       >
         <h2 class="text-sm font-semibold mb-3 text-gray-900 dark:text-gray-100">
-          标签
+          標籤
         </h2>
         <div class="sidebar-expand-list flex flex-wrap gap-2">
           {allTags.map(([tag, count], i) => (
@@ -160,7 +160,7 @@ function slugify(post: (typeof sorted)[0]) {
               class="sidebar-toggle-btn mt-3 text-xs text-primary hover:underline"
               data-expanded="false"
             >
-              显示全部 ({allTags.length})
+              顯示全部 ({allTags.length})
             </button>
           )
         }
@@ -172,7 +172,7 @@ function slugify(post: (typeof sorted)[0]) {
     randomPosts.length > 0 && (
       <div class="bg-white dark:bg-[var(--color-card-dark)] rounded-2xl shadow-sm p-5">
         <h2 class="text-sm font-semibold mb-4 text-gray-900 dark:text-gray-100">
-          随机推荐
+          隨機推薦
         </h2>
         <div class="space-y-2">
           {randomPosts.map((post) => (

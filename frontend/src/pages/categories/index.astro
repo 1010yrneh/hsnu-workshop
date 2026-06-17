@@ -37,10 +37,10 @@ const categories = Array.from(categoryMap.entries())
   .sort((a, b) => b.count - a.count);
 ---
 
-<BlogLayout title="分类">
+<BlogLayout title="分類">
   <h1 class="text-2xl font-bold mb-8 flex items-center gap-2">
     <span class="w-1 h-6 bg-primary rounded-full inline-block"></span>
-    分类
+    分類
   </h1>
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
     {categories.map((cat) => (
