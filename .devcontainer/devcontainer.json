@@ -1,0 +1,32 @@
+{
+  "name": "HSNU Workshop",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "forwardPorts": [4321, 8000],
+  "portsAttributes": {
+    "4321": {
+      "label": "Astro frontend",
+      "onAutoForward": "notify"
+    },
+    "8000": {
+      "label": "FastAPI backend",
+      "onAutoForward": "notify"
+    }
+  },
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "astro-build.astro-vscode",
+        "dbaeumer.vscode-eslint",
+        "bradlc.vscode-tailwindcss",
+        "ms-python.python"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "${containerWorkspaceFolder}/backend/.venv/bin/python",
+        "typescript.tsdk": "${containerWorkspaceFolder}/frontend/node_modules/typescript/lib"
+      }
+    }
+  }
+}
