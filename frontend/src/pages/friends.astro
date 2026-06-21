@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Comment from '../components/waline/Comment.astro';
+import Comment from '../components/comments/Comment.astro';
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -98,7 +98,7 @@ const articles = data?.article_data || [];
                 href={friend.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="card-hover bg-white dark:bg-[var(--color-card-dark)] rounded-xl shadow-sm p-4 flex flex-col items-center text-center group"
+                class="group flex flex-col items-center rounded-xl bg-white p-4 text-center shadow-sm transition-all duration-300 ease-out will-change-transform hover:-translate-y-1 hover:shadow-lg dark:bg-[var(--color-card-dark)] dark:hover:shadow-primary/10"
               >
                 <img
                   src={friend.avatar}
@@ -135,7 +135,7 @@ const articles = data?.article_data || [];
                 href={item.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="card-hover bg-white dark:bg-[var(--color-card-dark)] rounded-xl shadow-sm p-4 flex items-center gap-3 group"
+                class="group flex items-center gap-3 rounded-xl bg-white p-4 shadow-sm transition-all duration-300 ease-out will-change-transform hover:-translate-y-1 hover:shadow-lg dark:bg-[var(--color-card-dark)] dark:hover:shadow-primary/10"
               >
                 <img
                   src={item.avatar}
@@ -207,7 +207,7 @@ const articles = data?.article_data || [];
               href={article.link}
               target="_blank"
               rel="noopener noreferrer"
-              class="card-hover flex items-center gap-4 bg-white dark:bg-[var(--color-card-dark)] rounded-xl shadow-sm p-4 group"
+              class="group flex items-center gap-4 rounded-xl bg-white p-4 shadow-sm transition-all duration-300 ease-out will-change-transform hover:-translate-y-1 hover:shadow-lg dark:bg-[var(--color-card-dark)] dark:hover:shadow-primary/10"
             >
               <img
                 src={article.avatar}

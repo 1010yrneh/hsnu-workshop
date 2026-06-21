@@ -38,7 +38,7 @@ function formatDate(d: Date) {
 ---
 
 <article
-  class="card-hover bg-white dark:bg-[var(--color-card-dark)] rounded-2xl shadow-sm overflow-hidden group"
+  class="group overflow-hidden rounded-2xl bg-white shadow-sm transition-all duration-300 ease-out will-change-transform hover:-translate-y-1 hover:shadow-lg dark:bg-[var(--color-card-dark)] dark:hover:shadow-primary/10"
   transition:animate="fade"
 >
   <a href={`${routePrefix}${slug}`} class="block">

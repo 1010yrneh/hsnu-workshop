@@ -41,7 +41,7 @@ Bun 1.3 改善了套件管理器的穩定性和相容性：
 
 | 工具 | 用途 |
 |------|------|
-| [Waline](https://waline.js.org) | 輕量留言系統 |
+| 自訂後端 | 留言與互動資料 |
 | [KaTeX](https://katex.org) | Web 數學公式渲染 |
 | [Shiki](https://shiki.style) | 程式碼語法醒目標示 |
 

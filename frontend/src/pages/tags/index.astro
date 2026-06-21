@@ -25,7 +25,7 @@ const tags = Array.from(tagMap.entries())
     {tags.map((tag) => (
       <a
         href={`/tags/${tag.name}`}
-        class="card-hover bg-white dark:bg-[var(--color-card-dark)] rounded-xl shadow-sm px-4 py-2.5 group"
+        class="group rounded-xl bg-white px-4 py-2.5 shadow-sm transition-all duration-300 ease-out will-change-transform hover:-translate-y-1 hover:shadow-lg dark:bg-[var(--color-card-dark)] dark:hover:shadow-primary/10"
       >
         <span class="font-medium group-hover:text-primary transition-colors">
           {tag.name}

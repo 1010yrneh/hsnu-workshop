@@ -21,5 +21,4 @@ export const SOCIAL_LINKS = [
   { name: "RSS", href: "/rss.xml", icon: "rss" },
 ];
 
-export const npmCDN = "";
 export const backendServer = "";
