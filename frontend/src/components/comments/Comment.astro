@@ -33,7 +33,7 @@ const { articleTitle = Astro.url.pathname, class: className } = Astro.props;
       disabled={!backendServer}
       maxlength="500"
       rows="3"
-      placeholder={backendServer ? '留言後端功能開發中' : '接上 backendServer 後即可留言'}
+      placeholder={backendServer ? '有什麼想說的嗎？' : '接上後端後即可留言'}
       class="w-full resize-y rounded-md border border-[var(--color-border)] bg-[var(--color-bg)] p-3 font-[inherit] text-inherit dark:bg-[var(--color-bg-dark)]"
     ></textarea>
     <div class="mt-3 flex flex-col justify-between gap-3 sm:flex-row">
