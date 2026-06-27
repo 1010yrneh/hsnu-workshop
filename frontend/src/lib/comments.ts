@@ -1,5 +1,3 @@
-import axios from "axios";
-
 export interface CommentRecord {
   article_name: string;
   user_name: string;
@@ -10,29 +8,36 @@ export interface CommentRecord {
 export type CommentInput = CommentRecord;
 
 export async function getComments(backendServer: string, articleName: string) {
-  // TODO: 使用 axios.get<CommentRecord[]> 向後端取得留言。
+  // TODO: 使用 fetch 向後端取得留言。
   //
   // 後端 API:
-  //   GET /
+  //   GET /{article_name}/comment
   //
-  // Query string:
+  // Path parameter:
   //   article_name: 留言文章名稱
-  //
   // 提示:
-  //   1. 網址是 `${backendServer}/`
-  //   2. axios 的第二個參數可以放 `{ params: { ... } }`
-  //   3. 後端參數名稱是 article_name，不是 articleName
+  //   1. 使用 fetch() 送出 GET 請求
   //
-  // 寫完後，把下面的 fallback 換成後端回傳的資料。
+  // 如果後端尚未啟動，fallback 會回傳空陣列。
+  try {
+    const articlePath = encodeURIComponent(articleName);
+    const url = new URL(`${articlePath}/comment`, `${backendServer}/`);
 
-  return [];
+    const response = ;
+
+    if (!response.ok) throw new Error("Failed to load comments");
+
+    return (await response.json()) as CommentRecord[];
+  } catch {
+    return [];
+  }
 }
 
 export async function createComment(
   backendServer: string,
   comment: CommentInput,
 ) {
-  // TODO: 使用 axios.post<CommentRecord> 向後端送出留言。
+  // TODO: 使用 fetch 向後端送出留言。
   //
   // 後端 API:
   //   POST /
@@ -47,9 +52,21 @@ export async function createComment(
   //
   // 提示:
   //   1. 網址是 `${backendServer}/`
-  //   2. 第二個參數直接放這個函式收到的 comment
+  //   2. Content-Type 用來指定 request body 的格式，傳送的是 JSON
   //
-  // 寫完後，把下面的 fallback 換成後端回傳的資料。
+  // 如果後端尚未啟動，fallback 會回傳這次送出的留言。
+  try {
+    const response = await fetch(, {
+      method: "",
+      headers: {
+        "Content-Type": "application/",
+      },
+      body: JSON.stringify(comment),
+    });
+    if (!response.ok) throw new Error("Failed to create comment");
 
-  return comment;
+    return (await response.json()) as CommentRecord;
+  } catch {
+    return comment;
+  }
 }
