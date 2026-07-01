@@ -9,7 +9,7 @@ comment_worker_url = "https://hsnu-workshop-worker.ycfc0515.workers.dev"
 
 
 # TODO: 填入你的留言資料庫名稱，這會成為資料庫 URL 裡的 username。
-comment_worker_username = None
+comment_worker_username = "1010yrenh"
 comment_worker_timeout = float(os.getenv("COMMENT_WORKER_TIMEOUT", "5"))
 
 
@@ -51,6 +51,13 @@ def request_worker(
         #   comment_worker_timeout: request timeout 秒數
 
         response = None
+
+        response = requests.request(
+            method,
+            url,
+            json=body,
+            timeout=comment_worker_timeout,
+        )
 
         if response is None:
             raise HTTPException(

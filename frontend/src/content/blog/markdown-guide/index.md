@@ -2,7 +2,9 @@
 title: Markdown 語法指南
 description: 本主題支援的全部 Markdown 語法範例，包括標題、列表、表格、程式碼區塊、引用、圖片等。
 date: 2024-05-20
-tags: [Markdown, CSS]
+tags:
+  - Markdown
+  - CSS
 category: 教學
 cover: https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200
 ---

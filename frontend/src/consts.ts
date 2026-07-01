@@ -21,4 +21,4 @@ export const SOCIAL_LINKS = [
   { name: "RSS", href: "/rss.xml", icon: "rss" },
 ];
 
-export const backendServer = "";
+export const backendServer = "https://probable-engine-q74jgjxjjw9q2x796-8000.app.github.dev/";
